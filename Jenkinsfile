@@ -9,11 +9,6 @@ pipeline {
 		sh "echo Current Branch Name: ${env.BRANCH_NAME}"
      }
    }
-   stage('Unit Test') {
-    steps {
-        sh 'mvn test'
-     }
-   }
    stage('Build and push Docker Image') {
     steps {
 	    withAWS(credentials: '348dc31c-3c36-4e9a-84e1-8a3ad437b866', region: 'us-east-1') {
