@@ -1,7 +1,7 @@
 pipeline {
  agent any
  environment {
- mvn = '/usr/share/maven'
+ gradle = '/opt/gradle/gradle-6.4.1
  }
  stages {
    stage('Get Current Branch') {
